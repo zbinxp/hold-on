@@ -44,7 +44,7 @@
 任何支持 agent skills 的 harness 都可以，一条命令：
 
 ```bash
-npx skills add <you>/hold-on -g -y
+npx skills add zbinxp/hold-on -g -y
 ```
 
 它会装到 `~/.agents/skills/hold-on`——这是**跨 agent 的约定目录**，OpenCode、Claude Code、Cline、Amp 等 20 多个 agent 都原生读它，装一次就全覆盖了。
@@ -52,7 +52,7 @@ npx skills add <you>/hold-on -g -y
 **手动安装**（只装 OpenCode）：
 
 ```bash
-git clone https://github.com/<you>/hold-on.git ~/.config/opencode/skills/hold-on
+git clone https://github.com/zbinxp/hold-on.git ~/.config/opencode/skills/hold-on
 ```
 
 目录名必须是 `hold-on`——skill id 取自目录名，不是取自仓库名。装完新开一个会话，说一句「我想买个划船机」验证。手动调用用 `@hold-on`。
