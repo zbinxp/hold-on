@@ -41,17 +41,21 @@
 
 ## 安装
 
-**OpenCode V2。目录名必须是 `hold-on`**——skill id 取自目录名，不是取自仓库名。
+任何支持 agent skills 的 harness 都可以，一条命令：
 
 ```bash
-git clone https://github.com/<you>/hold-on-skill.git ~/.config/opencode/skills/hold-on
+npx skills add <you>/hold-on -g -y
 ```
 
-新开一个会话即可。验证：说一句「我想买个划船机」。
+它会装到 `~/.agents/skills/hold-on`——这是**跨 agent 的约定目录**，OpenCode、Claude Code、Cline、Amp 等 20 多个 agent 都原生读它，装一次就全覆盖了。
 
-手动调用用 `@hold-on`。
+**手动安装**（只装 OpenCode）：
 
-> Claude Code / 其他 harness 需要放到各自的 skills 目录。这个 skill 只在 OpenCode 上验证过。
+```bash
+git clone https://github.com/<you>/hold-on.git ~/.config/opencode/skills/hold-on
+```
+
+目录名必须是 `hold-on`——skill id 取自目录名，不是取自仓库名。装完新开一个会话，说一句「我想买个划船机」验证。手动调用用 `@hold-on`。
 
 ## 隐私
 
