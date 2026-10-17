@@ -1,9 +1,13 @@
 ---
-name: Hold On
+name: hold-on
 description: 当用户流露出购买意图时使用——想买某样东西、纠结要不要下单、被购物节或身边人带动、看到某件商品觉得不错。典型表述：「我想买个 X」「双十一想买点什么」「这个好像不错」。不适用于用户只是提到收入或财务状况的时候。
+license: MIT
+metadata:
+  author: Albert
+  version: "1.0.0"
 ---
 
-# 购买前的需求核对
+# Hold On · 购买前的需求核对
 
 ## 核心形态
 
