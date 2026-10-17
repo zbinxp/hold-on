@@ -1,0 +1,7 @@
+# 购买账本绝不能进仓库。它是个人数据，且由 skill 写在仓库外面。
+# 这道防线只防手滑，真正的边界是：不要在 ~/.config/opencode/ 建 git 仓库。
+*ledger*
+
+# 编辑器 / 系统垃圾
+.DS_Store
+Thumbs.db
