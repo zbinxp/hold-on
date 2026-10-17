@@ -55,7 +55,11 @@ git clone https://github.com/<you>/hold-on-skill.git ~/.config/opencode/skills/h
 
 ## 隐私
 
-购买记录存在 `~/.config/opencode/hold-on-ledger.md`，**不在这个仓库里**，也不该进任何仓库。仓库里的 `.gitignore` 有一道防线，但真正的边界是：**不要在这个仓库的上级目录建 git 仓库。**
+购买记录存在 `~/.hold-on-ledger.md`——**刻意放在所有 harness 之外**。它是你的购买历史，不属于 OpenCode，也不属于任何别的 agent。
+
+之所以放中立位置：如果你在多个 harness 里都装了本 skill（OpenCode、Claude Code、WorkBuddy……），它们会**共用同一份账本**。否则你的购买记录会按 harness 裂成好几份，而「上次那台划船机用了几次」这件事只在装它的那一个 harness 里生效。
+
+这个文件不在仓库里，`.gitignore` 另有一道防线。
 
 ## 局限
 

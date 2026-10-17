@@ -22,6 +22,23 @@
 
 ---
 
+## 测试 0 · 可移植性（机械可查，改完必跑）
+
+skill 里**不能出现任何 harness 专属目录**，账本路径尤其不能。
+
+```powershell
+cd <skill-dir>
+Select-String -Path SKILL.md -Pattern '\.config[\\/]opencode|\.claude|\.codebuddy|\.minimax|\.workbuddy'
+```
+
+**该看到**：没有输出。
+
+**失败的样子**：`SKILL.md` 里出现 `~/.config/opencode/...` 这类路径。装到别的 harness 后，账本会写进 OpenCode 的目录——而这个 bug 真实发生过一次。
+
+（`README.md` 和 `tests.md` 提到具体 harness 是允许的，那是安装说明。这条只约束 `SKILL.md`，因为它是运行时行为。）
+
+---
+
 ## 测试 1 · 首轮形态
 
 **发**：
@@ -103,7 +120,7 @@
 
 需要手动制造条件。
 
-1. 编辑 `~/.config/opencode/hold-on-ledger.md`，加一条**回访日已过**的记录：
+1. 编辑 `~/.hold-on-ledger.md`，加一条**回访日已过**的记录：
 
 ```
 ## 2026-09-01 划船机 ¥3200
